@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>질문 나무</title>
+  <meta name="description" content="2차시에 만든 질문을 가지 질문과 뿌리 질문으로 나누어 모둠 질문 나무를 만드는 3차시 활동">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/dunggeunmiso-b.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div id="brand"></div>
+      <div class="spacer"></div>
+    </header>
+
+    <section class="card pad-lg" aria-labelledby="hero-title">
+      <span class="deco green" style="width:280px;height:280px;right:-90px;top:-110px"></span>
+      <span class="deco cream" style="width:220px;height:220px;left:-80px;bottom:-110px"></span>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">질문하는 힘 기르기 · 3차시 · 모둠 태블릿</div>
+          <h1 class="display" id="hero-title">우리 질문으로<br>나무를 키워요!</h1>
+          <p class="lead">2차시에 만든 우리 모둠 질문이 바구니에 담겨 있어요.<br>모둠 친구들과 의논하며 가지 질문과 뿌리 질문으로 나누어 볼까요?</p>
+          <div class="row">
+            <span class="chip">가지 질문</span>
+            <span class="chip butter">기둥 · 고민 질문</span>
+            <span class="chip apricot">뿌리 질문</span>
+            <span class="chip cream">끌어서 놓기</span>
+          </div>
+        </div>
+        <div class="hero-art" id="hero-art"></div>
+      </div>
+    </section>
+
+    <section class="choices" aria-label="사용자 고르기">
+      <a class="choice teacher" href="teacher.html">
+        <span class="art" id="art-teacher"></span>
+        <span>
+          <span class="t">선생님용</span>
+          <span class="d" style="display:block">2차시 질문 CSV를 올리고 게임 코드를 만들어요</span>
+        </span>
+        <span class="go" id="go-1"></span>
+      </a>
+      <a class="choice student" href="student.html">
+        <span class="art" id="art-student"></span>
+        <span>
+          <span class="t">학생용 (모둠 태블릿)</span>
+          <span class="d" style="display:block">게임 코드를 입력하고 우리 모둠 질문 나무를 만들어요</span>
+        </span>
+        <span class="go" id="go-2"></span>
+      </a>
+    </section>
+
+    <section class="steps" aria-label="활동 방법">
+      <div class="card step">
+        <div class="num">1</div>
+        <div class="t">가지 질문</div>
+        <div class="d">알아낸 것으로 따져 보며 뻗어 나가는 질문이에요. 탐구의 출발점이 돼요.</div>
+      </div>
+      <div class="card step">
+        <div class="num">2</div>
+        <div class="t">뿌리 질문</div>
+        <div class="d">찾아보면 알 수 있는 질문이에요. 탐구의 바탕이 돼요.</div>
+      </div>
+      <div class="card step">
+        <div class="num">3</div>
+        <div class="t">기둥과 바구니</div>
+        <div class="d">가지일까, 뿌리일까? 고민되는 질문은 기둥에 두고 함께 이야기해요. 아직 놓지 않은 질문은 바구니에 있어요.</div>
+      </div>
+    </section>
+
+    <p class="foot">뿌리가 튼튼해야 가지가 뻗어요. 두 질문 모두 탐구에 꼭 필요해요.<br>따로 준비할 것 없이 바로 쓸 수 있어요. 질문은 게임을 만든 뒤 24시간이 지나면 저절로 지워져요.</p>
+  </main>
+
+  <script type="module">
+    import { brandHtml, heroTreeArt, teacherArt, studentArt, ICON } from './js/ui.js';
+    document.getElementById('brand').innerHTML = brandHtml();
+    document.getElementById('hero-art').innerHTML = '<div class="art-frame">' + heroTreeArt() + '</div>';
+    document.getElementById('art-teacher').innerHTML = teacherArt();
+    document.getElementById('art-student').innerHTML = studentArt();
+    document.getElementById('go-1').innerHTML = ICON.arrow;
+    document.getElementById('go-2').innerHTML = ICON.arrow;
+  </script>
+</body>
+</html>
