@@ -152,7 +152,7 @@ export function legendItemHtml(k, cls = '') {
 
 export function legendHtml({ compact = false } = {}) {
   return `<div class="legend ${compact ? 'compact' : ''}">
-    ${['branch', 'trunk', 'root', 'basket'].map((k) => legendItemHtml(k)).join('')}
+    ${['root', 'branch', 'trunk', 'basket'].map((k) => legendItemHtml(k)).join('')}
   </div>`;
 }
 

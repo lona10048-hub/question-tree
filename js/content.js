@@ -9,7 +9,7 @@ export const ZONES = {
   root: { id: 'root', name: '뿌리 질문', short: '뿌리', desc: '찾아보면 알 수 있는 질문 · 탐구의 바탕' },
   basket: { id: 'basket', name: '질문 바구니', short: '바구니', desc: '아직 놓지 않은 질문' },
 };
-export const ZONE_ORDER = ['branch', 'trunk', 'root', 'basket'];
+export const ZONE_ORDER = ['root', 'branch', 'trunk', 'basket'];
 
 export const MAX_GROUPS = 8;
 export const PER_GROUP = 80; // 모둠마다 불러올 수 있는 질문 (서버와 같게)

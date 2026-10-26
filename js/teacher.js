@@ -543,7 +543,7 @@ function renderLobby() {
           <div class="card pad" style="padding:22px 24px">
             ${keySentenceHtml()}
             <div style="margin-top:14px">${legendHtml()}</div>
-            <p class="section-desc" style="margin-top:12px;font-size:16px">시작하면 모둠 태블릿에 나무가 나타나고, 질문 바구니에 그 모둠의 질문이 담겨요. 모둠 친구들이 의논하며 질문을 끌어다 가지·기둥·뿌리에 놓아요.</p>
+            <p class="section-desc" style="margin-top:12px;font-size:16px">시작하면 모둠 태블릿에 나무가 나타나고, 질문 바구니에 그 모둠의 질문이 담겨요. 모둠 친구들이 의논하며 질문을 끌어다 뿌리·가지·기둥에 놓아요.</p>
           </div>
         </section>
       </div>`;
@@ -897,7 +897,7 @@ function renderDone() {
       <button type="button" class="btn btn-ghost btn-sm" data-act="home">게임 목록</button>`)}
     <section class="card pad-lg">
       <span class="deco butter" style="width:300px;height:300px;right:-100px;top:-120px"></span>
-      <div class="mascot-row">${catSvg(96)}<div class="bubble">우리 반 질문 나무가 모두 자랐어요!<br>가지 질문 <b>${nb}개</b>, 뿌리 질문 <b>${nr}개</b>${nn ? `, 새로 쓴 질문 <b>${nn}개</b>` : ''}가 모였어요.</div></div>
+      <div class="mascot-row">${catSvg(96)}<div class="bubble">우리 반 질문 나무가 모두 자랐어요!<br>뿌리 질문 <b>${nr}개</b>, 가지 질문 <b>${nb}개</b>${nn ? `, 새로 쓴 질문 <b>${nn}개</b>` : ''}가 모였어요.</div></div>
       <h1 class="display" style="font-size:clamp(34px,4.6vw,56px);margin:18px 0 16px">질문 나무 둘러보기</h1>
       ${keySentenceHtml()}
       <div style="margin-top:14px">${legendHtml()}</div>
@@ -969,7 +969,7 @@ async function savePng(g) {
   }
 }
 
-// 4차시에 쓸 CSV: 모둠마다 가지 → 기둥 → 뿌리 → 바구니 순서
+// 4차시에 쓸 CSV: 모둠마다 뿌리 → 가지 → 기둥 → 바구니 순서
 function exportCsv() {
   if (!S.items) return toast('모둠 나무를 받아오는 중이에요. 잠시 뒤 다시 눌러 주세요.', 'warn');
   const rows = [['번호', '모둠', '자리', '질문', '새 질문', '2차시 활동', '주제']];
